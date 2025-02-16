@@ -85,25 +85,25 @@ function handleClick(playerSelection) {
 function updateChoices(playerSelection, computerSelection) {
   switch (playerSelection) {
     case 'FROG':
-      playerSign.textContent = '✊'
+      playerSign.textContent = '🐸'
       break
     case 'ELEPHANT':
-      playerSign.textContent = '✋'
+      playerSign.textContent = '🐘'
       break
     case 'BUNNY':
-      playerSign.textContent = '✌'
+      playerSign.textContent = '🐰'
       break
   }
 
   switch (computerSelection) {
     case 'FROG':
-      computerSign.textContent = '✊'
+      computerSign.textContent = '🐸'
       break
     case 'ELEPHANT':
-      computerSign.textContent = '✋'
+      computerSign.textContent = '🐘'
       break
     case 'BUNNY':
-      computerSign.textContent = '✌'
+      computerSign.textContent = '🐰'
       break
   }
 }
