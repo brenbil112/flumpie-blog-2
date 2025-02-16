@@ -1,10 +1,10 @@
 :root {
     --primary-light: #eee;
-    --primary-dark: #222831;
-    --secondary-dark: #393e46;
+    --primary-dark: green;
+    --secondary-dark: darkgreen;
     --secondary-dark-hover: #4a4f57;
     --secondary-dark-active: #5b5f68;
-    --header: #111720;
+    --header: darkgreen;
     --primary-yellow: #fac650;
   }
   
