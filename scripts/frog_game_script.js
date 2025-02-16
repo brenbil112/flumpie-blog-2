@@ -163,8 +163,8 @@ function setFinalMessage() {
 function restartGame() {
   playerScore = 0
   computerScore = 0
-  scoreInfo.textContent = 'Choose your weapon'
-  scoreMessage.textContent = 'First to score 5 points wins the game'
+  scoreInfo.textContent = 'Choose your Fighter!'
+  scoreMessage.textContent = 'First to score 5 points wins the game!  Frog > Bunny > Elephant > Frog'
   playerScorePara.textContent = 'Player: 0'
   computerScorePara.textContent = 'Computer: 0'
   playerSign.textContent = '❔'
