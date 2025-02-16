@@ -9,17 +9,17 @@ function playRound(playerSelection, computerSelection) {
     roundWinner = 'tie'
   }
   if (
-    (playerSelection === 'ROCK' && computerSelection === 'SCISSORS') ||
-    (playerSelection === 'SCISSORS' && computerSelection === 'PAPER') ||
-    (playerSelection === 'PAPER' && computerSelection === 'ROCK')
+    (playerSelection === 'FROG' && computerSelection === 'BUNNY') ||
+    (playerSelection === 'BUNNY' && computerSelection === 'ELEPHANT') ||
+    (playerSelection === 'ELEPHANT' && computerSelection === 'FROG')
   ) {
     playerScore++
     roundWinner = 'player'
   }
   if (
-    (computerSelection === 'ROCK' && playerSelection === 'SCISSORS') ||
-    (computerSelection === 'SCISSORS' && playerSelection === 'PAPER') ||
-    (computerSelection === 'PAPER' && playerSelection === 'ROCK')
+    (computerSelection === 'FROG' && playerSelection === 'BUNNY') ||
+    (computerSelection === 'BUNNY' && playerSelection === 'ELEPHANT') ||
+    (computerSelection === 'ELEPHANT' && playerSelection === 'FROG')
   ) {
     computerScore++
     roundWinner = 'computer'
@@ -31,11 +31,11 @@ function getRandomChoice() {
   let randomNumber = Math.floor(Math.random() * 3)
   switch (randomNumber) {
     case 0:
-      return 'ROCK'
+      return 'FROG'
     case 1:
-      return 'PAPER'
+      return 'ELEPHANT'
     case 2:
-      return 'SCISSORS'
+      return 'BUNNY'
   }
 }
 
@@ -51,17 +51,17 @@ const playerScorePara = document.getElementById('playerScore')
 const computerScorePara = document.getElementById('computerScore')
 const playerSign = document.getElementById('playerSign')
 const computerSign = document.getElementById('computerSign')
-const rockBtn = document.getElementById('rockBtn')
-const paperBtn = document.getElementById('paperBtn')
-const scissorsBtn = document.getElementById('scissorsBtn')
+const frogBtn = document.getElementById('frogBtn')
+const elephantBtn = document.getElementById('elephantBtn')
+const bunnyBtn = document.getElementById('bunnyBtn')
 const endgameModal = document.getElementById('endgameModal')
 const endgameMsg = document.getElementById('endgameMsg')
 const overlay = document.getElementById('overlay')
 const restartBtn = document.getElementById('restartBtn')
 
-rockBtn.addEventListener('click', () => handleClick('ROCK'))
-paperBtn.addEventListener('click', () => handleClick('PAPER'))
-scissorsBtn.addEventListener('click', () => handleClick('SCISSORS'))
+frogBtn.addEventListener('click', () => handleClick('FROG'))
+elephantBtn.addEventListener('click', () => handleClick('ELEPHANT'))
+bunnyBtn.addEventListener('click', () => handleClick('BUNNY'))
 restartBtn.addEventListener('click', restartGame)
 overlay.addEventListener('click', closeEndgameModal)
 
@@ -84,25 +84,25 @@ function handleClick(playerSelection) {
 
 function updateChoices(playerSelection, computerSelection) {
   switch (playerSelection) {
-    case 'ROCK':
+    case 'FROG':
       playerSign.textContent = '✊'
       break
-    case 'PAPER':
+    case 'ELEPHANT':
       playerSign.textContent = '✋'
       break
-    case 'SCISSORS':
+    case 'BUNNY':
       playerSign.textContent = '✌'
       break
   }
 
   switch (computerSelection) {
-    case 'ROCK':
+    case 'FROG':
       computerSign.textContent = '✊'
       break
-    case 'PAPER':
+    case 'ELEPHANT':
       computerSign.textContent = '✋'
       break
-    case 'SCISSORS':
+    case 'BUNNY':
       computerSign.textContent = '✌'
       break
   }
