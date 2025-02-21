@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sketch Pad</title>
+    <link rel="stylesheet" href="sketch_pad.css"/>
+    <link rel="stylesheet" href="reset.css"/>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="title"><h1>Sketch Pad</h1></div>
+        <div class="mode">Mode: Coloring (click to stop)</div>
+        <div class="content">
+            <div class="board"></div>
+            <div class="buttons">
+                <button class = 'blackButton' onclick="changeColor('black')">Black</button>
+                <button class = 'greenButton' onclick="changeColor('green')">Green</button>
+                <button class = 'randomButton' onclick="changeColor('random')">Random</button>
+                <button class = 'erasorButton' onclick="changeColor('white')">Erasor</button>
+                <button onclick="resetBoard()">Reset</button>
+            </div>
+            <div>
+                <input type="text" placeholder="Size of Board" value="16" onchange="changeSize(this.value)"/>
+                <button>Set Size</button>
+            </div>
+            <div class="error" style="display: none;">
+                Input must be between 2 and 100
+            </div>
+        </div>
+    </div>
+    <script src="sketch_pad_script.js"></script>
+</body>
+</html>
