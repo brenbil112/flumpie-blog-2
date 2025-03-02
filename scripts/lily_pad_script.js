@@ -12,7 +12,7 @@ createBtn.addEventListener('click', () => {
     let img = document.createElement('img');
     inputBox.className = 'input-box';
     inputBox.setAttribute('contenteditable', 'true');
-    img.src = "images/delete.png";
+    img.src = "images/lily_pad_images/delete.png";
     notesContainer.appendChild(inputBox).appendChild(img);
     updateStorage();
 });
